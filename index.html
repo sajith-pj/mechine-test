@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Bootstrap -->
+
+    <link href="./css/style.css" type="text/css" rel="stylesheet" />
+    <title>Form</title>
+</head>
+
+<body class=" d-flex justify-content-center align-items-center " >
+
+    <div class="container">
+        <form action="" onsubmit="handleSubmit()">
+        <div class="row form-container" style="height:90vh;overflow: hidden;">
+            <div class="col-6 left-pane d-flex  align-items-centers flex-column">
+                <h1 class="left-pane-heading">General Information</h1>
+                <div class="row mb-4 mt-4">
+                    <div class="col-12">
+                        <input type="text" class="input form-control" placeholder="Title" id="title" required />
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="First Name" required/>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="input form-control" placeholder="Last Name" required />
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-12 form-group">
+                        <div class="dropdown">
+                            <button id="position-dropdown" class="form-control w-100" type="button" 
+                                data-bs-toggle="dropdown" aria-expanded="false" value="Position">
+                                Position
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="position-dropdown" style="width: 550px;">
+                                <li><button class="dropdown-item" onclick="setValue('SE Engineer 1')" >SE Engineer 1</button></li>
+                                <li><button class="dropdown-item" onclick="setValue('SE Engineer II')">SE Engineer II</button></li>
+                                <li><button class="dropdown-item" onclick="setValue('SE Engineer III')">SE Engineer III</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="Business Arena" required />
+                    </div>
+                    <div class="col-6">
+                        <div class="dropdown">
+                            <button class="form-control w-100" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Employees
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="width: 300px;">
+                                <li><a class="dropdown-item" href="#">Employee I</a></li>
+                                <li><a class="dropdown-item" href="#">Employee II</a></li>
+                                <li><a class="dropdown-item" href="#">Employee III</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 right-pane d-flex justify-content-center align-items-centers flex-column">
+                <h1>Contact Details</h1>
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <input type="text" class="input form-control" placeholder="Street+Nr" required />
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <input type="text" class="input form-control" placeholder="Additional Information" required />
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-3">
+                        <input type="number" class="form-control" placeholder="Zip Code" required/>
+                    </div>
+                    <div class="col-8">
+                        <div class="dropdown">
+                            <button class="form-control w-100" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Place
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-12">
+                            <div class="dropdown">
+                                <button class="form-control w-100" type="button" id="place-dropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Place
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="place-dropdown">
+                                    <li><button class="dropdown-item" onclick="setPlace('Palakkad')">Palakkad</button></li>
+                                    <li><button class="dropdown-item" onclick="setPlace('Calicut')">Calicut</button></li>
+                                    <li><button class="dropdown-item" onclick="setPlace('Trivandrum')">Trivandrum</button></li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-3">
+                        <input type="text" class="form-control" placeholder="Code+" required />
+                    </div>
+                    <div class="col-8">
+                        <input type="number" class="form-control" placeholder="Phone Number" required />
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <input type="email" class="form-control" placeholder="Your Email" required />
+                    </div>
+                </div>
+                <div class="row d-flex flex-row mb-4">
+                    <div class="col-12">
+                    <input type="radio" name="" id="terms-policy" required>
+                    <label for=""> I do accept the <a href="">terms and conditions</a> on your site </label>
+                </div>
+                <div class="col-12 mt-3">
+                    <button type="submit"  class="register-btn"> Register Badge</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap Script -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
